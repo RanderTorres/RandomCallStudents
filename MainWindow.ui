@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>578</width>
+    <height>195</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>RandomCallStudents</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QProgressBar" name="progressBar">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>70</y>
+      <width>191</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pbtn_importStudentFile">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>30</y>
+      <width>151</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>等线</family>
+      <pointsize>13</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>导入学生文件</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_nowStudentsFile">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>100</y>
+      <width>191</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>等线</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>当前文件：*None*</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="rb_ifReCall">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>80</y>
+      <width>161</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>等线</family>
+      <pointsize>13</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>跳过已点过的学生</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pbtn_Call">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>10</y>
+      <width>81</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>等线</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>点名</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="showResult">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>10</y>
+      <width>231</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>华文楷体</family>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_total">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>110</y>
+      <width>51</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>等线</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>统计：</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="samStudent">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>140</y>
+      <width>111</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>等线 Light</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>总学生数：</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="callAndUncall">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>140</y>
+      <width>211</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>等线 Light</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>已点学生/未点学生：</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="perCallStudent">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>85</y>
+      <width>42</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Symbol</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="minimum">
+     <number>1</number>
+    </property>
+    <property name="maximum">
+     <number>100</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_perCallStu">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>80</y>
+      <width>111</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>等线</family>
+      <pointsize>13</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>单次点名人数：</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>172</y>
+      <width>401</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Nirmala UI</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Developed by Rander Torres (2024) | Contact: randertorres@qq.com</string>
+    </property>
+   </widget>
+   <widget class="Line" name="line">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>105</y>
+      <width>361</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="line_2">
+    <property name="geometry">
+     <rect>
+      <x>193</x>
+      <y>10</y>
+      <width>20</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
